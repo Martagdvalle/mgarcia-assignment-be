@@ -1,15 +1,6 @@
 from recipe_api import app
 import pytest
 
-def test_hello_world(testing_client):
-    """
-    GIVEN a Flask application
-    WHEN the '/' page is requested (GET)
-    THEN check the response is valid
-    """
-    response = testing_client.get('/')
-    assert response.status_code == 200
-
 def test_get_recipes(testing_client):
     """
     GIVEN a Flask application
