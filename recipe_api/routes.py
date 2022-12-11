@@ -36,7 +36,7 @@ def update_recipe(id):
     db.session.commit()
     return format_recipe(recipe)
 
-@app.route('/recipes/<int:id>', methods=['DELETE'])
+@app.route('/<int:id>', methods=['DELETE'])
 def delete_recipe(id):
     recipe = Recipe.query.get(id)
     db.session.delete(recipe)
