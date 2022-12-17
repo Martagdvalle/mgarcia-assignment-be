@@ -19,10 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ENV: ghci
-      DBUSER: postgres@jseijas-dbsrv.postgres.database.azure.com
-      DBPASS: Pa$$w0rd1990
-      DBHOST: jseijas-dbsrv.postgres.database.azure.com
-      DBNAME: mgarcia-assignment
 
     steps:
     - uses: actions/checkout@v3
