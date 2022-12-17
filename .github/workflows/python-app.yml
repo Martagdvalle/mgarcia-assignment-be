@@ -50,6 +50,7 @@ jobs:
         name: python-app
         path: |
           . 
+
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -79,7 +80,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       id: deploy-to-webapp
       with:
-        app-name: 'mgarcia-assignment-be-pr'
+        app-name: 'mgarcia-assignment-be-prod'
 
   deploy-dev:
     if: github.ref == 'refs/heads/dev'
@@ -110,4 +111,4 @@ jobs:
       uses: azure/webapps-deploy@v2
       id: deploy-to-webapp
       with:
-        app-name: 'mgarcia-assignment-be-dv'
+        app-name: 'mgarcia-assignment-be-dev'
